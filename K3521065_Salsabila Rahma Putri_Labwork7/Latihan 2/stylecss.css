@@ -1,0 +1,9 @@
+mark{
+    background-color: white;
+}
+
+#blok.replace{
+    color: red;
+    font-weight: bold;
+    background-color: yellow;
+}

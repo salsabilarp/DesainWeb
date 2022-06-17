@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+</head>
+<body>
+    <center>
+        <h1>Penghitung Karakter</h1>
+        <br>
+        <textarea name="ulasan" id="ulasan" rows="4" cols="60"></textarea>
+        <br>
+        <h3>Jumlah huruf : <span id="hitung">0</span></h3>
+        <div id="bar"></div>
+    </center>
+
+    <script type="text/javascript">
+        $(document).ready(function(){ 
+            var batas = 50
+            $('#ulasan').keyup(function() { 
+                var karakter = this.value.length; 
+                if (karakter >= batas + 1) { 
+                    var del = (karakter - batas);
+                    this.value = this.value.substring(0, this.value.length-del); 
+                } else {
+                    $('#hitung').text(karakter);
+                };
+                $(function(){
+                        $('#bar').progressbar({
+                            value : (karakter * 2)
+                        });
+                });
+            });
+        });   
+    </script>
+</body>
+</html>

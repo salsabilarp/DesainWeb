@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hightlight Text</title>
+
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+<body>
+    <h1>PTIK FKIP UNS</h1>
+    <p>The<mark class="tanda">Faculty of Teacher Training and Education</mark>, <mark class="tanda">Sebelas Maret University</mark>, Surakarta is an 
+        <mark class="tanda">Educational Personnel Education Institution (LPTK)</mark> which has 24 study programs in 6 majors. Each study program 
+        has its own characteristics in producing <mark class="tanda">superior, strong and intelligent educational staff.</mark>
+    <br><br>
+      The <mark class="tanda">Informatics and Computer Technology Education (PTIK)</mark> study program is planned to take shelter in the management of the 
+      <mark class="tanda">Engineering and Vocational Education (PTK)</mark> department. This placement revises our previous statement, where the PTIK study 
+      program is under the P.MIPA department. PTIK is a study program that will produce graduates who are <mark class="tanda">prioritized to teach in 
+      vocational/vocational programs</mark>. So, it would be better if PTIK was under the PTK department which oversees vocational programs 
+      such as <mark class="tanda">Building Engineering Education</mark>, and <mark class="tanda">Mechanical Engineering Education</mark>. To meet the needs of 
+      lecturers in the field of information technology that cannot be met by the PTK department, PTIK will conduct <mark class="tanda">resource sharing with 
+      the mathematics study program.</mark>
+    </p>
+
+    <button id="highlight">Highlight Paragraf</button>
+
+    <script type="text/javascript">
+        $(document).ready (function(){
+            $("mark").css({
+                    "background-color"  : "white"
+                });
+                
+            $("#highlight").click(function(){
+                $(".tanda").css({
+                    "background-color"  : "yellow", 
+                    "font-weight"       : "bold",
+                    "color"             : "red"
+                });
+            });
+
+            $("#highlight").dblclick(function(){
+                $(".tanda").css({
+                    "background-color"  : "white",
+                    "font-weight"       : "normal",
+                    "color"             : "black"
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

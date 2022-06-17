@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery</title>
+
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+</head>
+<body>
+    <center>
+        <h1 id="jam">Placeholder Jam</h1>
+        <h1 id="date"></h1>
+        <h1 id="time"></h1>
+        <br>
+        <button id="start">START/STOP</button>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#start').click(function(){
+                    $('#jam').hide();
+                        var tanggal = new Date(),
+                            myListMonths = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
+                            myListDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'],
+                            myDate = tanggal.getDate(),
+                            myDay = tanggal.getDay(),
+                            myMonth = tanggal.getMonth(),
+                            myYear = tanggal.getFullYear();
+
+                            $('#date').html( myListDays[myDay] + "," + " " + myDate + " " + myListMonths[myMonth] + " " + myYear);
+
+                        setInterval(function(){
+                            var waktu = new Date(),
+                                hour = waktu.getHours(),
+                                minute = waktu.getMinutes(),
+                                second = waktu.getSeconds();
+                                cekHour = (hour < 10 ? "0" : " ")
+                                cekMinute = (minute < 10 ? "0" : " ")
+                                cekSecond = (second < 10 ? "0" : " ")
+
+                            $('#time').html( cekHour + hour + " :" + cekMinute + minute + " :" + cekSecond + second);
+                        }, 1000);
+                    
+                    $('#date').show();
+                    $('#time').show();
+                });
+
+                $('#start').dblclick(function(){
+                    $('#jam').show();
+                    $('#date').hide();
+                    $('#time').hide();
+                });
+            });
+        </script>
+    </center>
+
+</body>
+</html>

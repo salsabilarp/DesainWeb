@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(248, 233, 252);
+}
+
+.bagian1{
+    position: absolute;
+    display: flex;
+    margin: 20px;
+}
+
+.bagian2{
+    background-color: rgb(183, 159, 206);
+    padding: 10px;
+}
+
+.kolom{
+    font-size: 35px;
+    font-weight: bold;
+    width: 290px;
+    padding: 8px;
+    margin-bottom: 10px;
+    color: rgb(96, 50, 134);
+    border-color: rgb(215, 208, 221);
+    align-content: center;
+}
+
+.button, .buttonOperasi{
+    width: 76px;
+    height: 60px;
+    font-size: 22px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.buttonHasil{
+    height: 122px;
+    width: 76px;
+    cursor: pointer;
+}
+
+.buttonHasil, .buttonOperasi{
+    background-color: rgb(107, 57, 165);
+    border-color: rgb(245, 228, 198);
+    color: rgb(248, 248, 248);
+    font-weight: bold;
+}
+
+.button{
+    color: rgb(52, 27, 75);
+    border-color: rgb(233, 221, 221);
+}
+
+.button:hover{
+    background-color: rgba(202, 175, 224, 0.432);
+}
+
+.buttonHasil:hover, .buttonOperasi:hover{
+    background-color: rgba(240, 248, 255, 0.774);
+    color: rgb(37, 14, 58);
+}
